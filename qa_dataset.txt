@@ -1,0 +1,258 @@
+"1. What is required to access a ResourceSpace system?
+Users are required to have an account.
+
+2. Where can users find the login for ResourceSpace?
+The login is found at the root address of your ResourceSpace installation.
+
+3. What happens when users log in to ResourceSpace?
+Logging in keeps the system secure and gives access to previously saved resource collections, shared projects, and research work.
+
+4. What can users do if they forget their password?
+They can request a password reminder to be sent to their email from the login screen.
+
+5. How can a new user register for ResourceSpace?
+A new user can request registration from the login screen, and their Service Administrators can create and approve their account.
+
+6. How can users change their password in ResourceSpace?
+Users can change their password by logging in, clicking on their name in the account navigation menu, and following the instructions.
+
+7. What should users do after finishing their session in ResourceSpace?
+Users should log out to ensure their account stays protected.
+
+8. How can users access the user preferences section in ResourceSpace?
+Users can click the user profile icon at the top right of the screen and select 'Preferences'.
+
+9. What is Retina mode in ResourceSpace?
+Retina mode uses the 'next size up' when rendering previews for a more crisp display on high-resolution screens.
+
+10. Can users change the default sort of search results?
+Yes, users can change the default sort value to relevance, popularity, colour, type, or date.
+
+11. What options do users have for default display of search results?
+Users can select large or extra large thumbnails, list view, or strip view.
+
+12. What happens when users click to view a resource?
+They can choose to display it in a preview modal within the page or across the full page.
+
+13. What does the basic simple search option do?
+It will just show a search field without Resource Types or additional filtering.
+
+14. What can the upload sequence option determine?
+It can determine whether to upload content before applying metadata or to set the metadata before uploading.
+
+15. What is the purpose of the keyboard navigation option?
+It allows users to navigate in ResourceSpace using the keyboard.
+
+16. What does enabling higher contrast mode do?
+It changes system colours to greatly increase contrast, making outlines clearer and link text underlined on hover.
+
+17. What types of notifications can users receive via email?
+Users can receive notifications about resources submitted for review, user account requests, or user resource requests.
+
+18. What does enabling 'CC me when sending resources and collections' do?
+It sends a copy of the email to the user each time they share resources or collections.
+
+19. What is the purpose of the daily email notification option?
+It provides a summary of all unread notifications from the last 24 hours.
+
+20. What is the role of messages in ResourceSpace?
+Messages help ensure that important notifications are prominently displayed and won't be overlooked.
+
+21. How can users manage their messages in ResourceSpace?
+Users can manage messages via the messages page, marking them as read/unread or deleting them.
+
+22. What happens if users enable the option to show system notifications on screen?
+They will see notifications as pop-ups in real time at the top right of the screen.
+
+23. What types of resource messages can users receive?
+Users can receive messages about resource state, metadata changes, and user uploads.
+
+24. What are actions in ResourceSpace?
+Actions alert users to resources or activities that need attention.
+
+25. What types of activities can be monitored using actions?
+Activities include resource requests, account requests, and changes to resource workflow states.
+
+26. What does enabling 'Show resource requests in my actions list' do?
+Resource requests will show as actions in the user's action list.
+
+27. What is the purpose of the advanced search feature?
+It allows users to create very refined searches using a wider selection of metadata fields.
+
+28. How does the ResourceSpace search feature help users?
+It allows users to start with a broad search and refine results to find the most relevant content.
+
+29. What is a watched search in ResourceSpace?
+It notifies users whenever resources are added or edited that match a set of search results.
+
+30. What can users do if they want to exclude specific terms from their search?
+They can enter the main search term followed by a space and a minus symbol and the term to exclude.
+
+31. How can geographical searches be conducted in ResourceSpace?
+Users can search for resources with embedded location data using the geographic search tool.
+
+32. What should users do to refine their searches effectively?
+Users should refine their search terms and consider using filters like resource type.
+
+33. What is the purpose of the browse bar on the search page?
+It allows users to navigate to content by expanding resource types as folders with relevant metadata tags.
+
+34. What keyboard shortcuts are available for browsing resources in ResourceSpace?
+Users can use the Left and Right Arrow keys to browse through resources.
+
+35. What does the Admin menu provide access to?
+It provides tools to manage ResourceSpace and its contents for users with the correct permissions.
+
+36. What did the Admin menu used to be called in earlier versions of ResourceSpace?
+It was called 'Team Centre'.
+
+37. What feature allows users to set metadata before uploading resources?
+The 'Set metadata first' option allows users to apply the same metadata to all resources.
+
+38. What happens when you enable keyboard navigation?
+You can use the keyboard to navigate in ResourceSpace.
+
+39. What does enabling the option to show standard pages in a modal do?
+It changes the appearance of the Requests page to show in a popup window.
+
+40. What are special search terms used for?
+They help retrieve resources based on criteria other than keywords.
+
+41. Can users search for resources by file type or size?
+Yes, they can search using information not held in dedicated metadata fields, such as file size or extension.
+
+42. What is the 'default per page' option?
+It allows users to choose the number of search results shown on one page, between 24 and 240.
+
+43. What is the benefit of enabling 'Send me emails in addition to system notifications'?
+It allows users to receive both in-system notifications and emails for relevant activities.
+
+44. How can users change the default collection bar display?
+They can set it to show or hide resource thumbnails in the collection bar by default.
+
+45. What does the 'Upload first' option allow during uploads?
+It allows users to preview resources one at a time before applying metadata.
+
+46. What does enabling 'Hide resource types on simple and advanced search' do?
+It hides the ability to filter by resource type at the top of the search areas.
+
+47. What are 'messages' notifications used for?
+They ensure important notifications are prominently displayed to users.
+
+48. What does enabling 'Show action links in a modal window' do?
+It allows users to perform simple approval actions without navigating to the messages area.
+
+49. What is the role of the daily email summary?
+It provides an overview of activity for users who may not log in every day.
+
+50. How can users manage their watched searches?
+They can manage saved searches from the watched search page in their User area.
+
+51. What happens if a user enters a unique resource ID in the search panel?
+They will be taken directly to that specific resource.
+
+52. How does enabling 'Mark messages as read once I have been sent the summary email' affect notifications?
+It will mark messages as read after the user receives the summary email.
+
+53. What does the 'Send me messages about resource access' option do?
+It notifies admins whenever a user requests access to a restricted resource.
+
+54. What should users do to clear their previous search in ResourceSpace?
+They should remember to clear the search page to ensure no additional terms are preventing results.
+
+55. What does enabling 'Send me user administration messages' do?
+It notifies admins whenever a new user account request is made.
+
+56. How can users refine their searches using tags?
+By clicking on a tag in the 'Browse by tag' option, they can perform a search for all resources of that type.
+
+57. What can users choose when setting the default sort direction?
+They can choose to sort their search results in ascending or descending order.
+
+58. What does the 'Show me system notifications on screen as they are received' option do?
+It displays notifications as pop-ups in real time.
+
+59. How can users navigate through pages in document preview?
+They can use the '<' and '>' keys to browse through pages.
+
+60. What is the 'Resource view modal' feature?
+It allows users to choose how to display a resource when viewing it.
+
+61. What can users do if they want to customize their ResourceSpace experience?
+They can adjust their user preferences in the Preferences section.
+
+62. What does enabling 'Show me system notifications on screen' help with?
+It helps users keep track of new messages without navigating away from their current page.
+
+63. What does the 'Send me emails instead of system notifications where possible' option do?
+It allows users to receive emails instead of in-system notifications when applicable.
+
+64. What should users do if they want to receive fewer emails but still want to be informed of activity?
+They should enable the option to receive a daily email with all unread notifications.
+
+65. What is the advantage of using the advanced search page?
+It allows users to create very precise searches using varied metadata fields.
+
+66. How can users access the advanced search features?
+They can access it through the advanced search page, which provides more metadata fields.
+
+67. What does enabling 'Send me resource messages about resource management' do?
+It informs users about state or metadata changes in resources they manage.
+
+68. What is the benefit of the 'Resource requests' monitoring option?
+It allows users to stay updated on requests made for resources.
+
+69. What does the 'default collection bar display' setting control?
+It controls whether resource thumbnails are shown in the collection bar by default.
+
+70. How do users log out of ResourceSpace?
+Users can log out by selecting the logout option in the main menu.
+
+71. What is the purpose of the simple search panel?
+It allows for quick, free text searching across all indexed fields.
+
+72. What happens if users set the 'Set metadata first' option during uploads?
+They will apply the same metadata to all resources before uploading.
+
+73. What does enabling 'Show action links in a modal window' allow users to do?
+It allows them to approve requests quickly without navigating away from the current view.
+
+74. What is the main function of the ResourceSpace search feature?
+To enable users to quickly locate the resources they need.
+
+75. What is a feature of the simple search that helps users find resources?
+It suggests alternative terms if there are no matching resources.
+
+76. What does the 'Send me a daily email with all unread notifications' option do?
+It sends a summary of all unread notifications once a day.
+
+77. What is the benefit of using the 'Browse by tag' option?
+It helps users easily navigate through resource types and related metadata.
+
+78. How can users notify themselves about changes to resources?
+By enabling notifications about resource management and workflow state changes.
+
+79. What can users do with the 'Watch this search' feature?
+They can receive notifications for resources added or edited that match their search criteria.
+
+80. What does the 'Show me system notifications on screen' feature help users with?
+It allows users to see real-time notifications without leaving their current task.
+
+81. How do users filter search results by resource type?
+They can select a specific resource type at the beginning of their search.
+
+82. What does the 'Use a tile layout for the navigation menus' option do?
+It changes how menus are displayed, showing them as tiled icons instead of a list.
+
+83. What does enabling 'Hide resource types on simple and advanced search' do?
+It removes the ability to filter by resource type in search areas.
+
+84. What is the role of the Admin menu in ResourceSpace?
+It provides tools for managing users and resources.
+
+85. What feature allows users to preview resources one at a time during uploads?
+The 'Upload first' option allows for previewing resources before applying metadata.
+
+86. What does the 'Default sort' setting control in ResourceSpace?
+It determines the order in which search results are displayed.
+
