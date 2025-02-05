@@ -4,13 +4,14 @@ from azure.core.credentials import AzureKeyCredential
 from azure.ai.language.questionanswering import QuestionAnsweringClient
 from dotenv import load_dotenv
 import os
+import streamlit as st
 
 # Cargar las variables de entorno
 load_dotenv()
-AI_ENDPOINT = os.getenv('AI_SERVICE_ENDPOINT')
-AI_KEY = os.getenv('AI_SERVICE_KEY')
-AI_PROJECT_NAME = os.getenv('QA_PROJECT_NAME')
-AI_DEPLOYMENT_NAME = os.getenv('QA_DEPLOYMENT_NAME')
+AI_ENDPOINT = st.secrets['AI_SERVICE_ENDPOINT']
+AI_KEY = st.secrets['AI_SERVICE_KEY']
+AI_PROJECT_NAME = st.secrets['QA_PROJECT_NAME']
+AI_DEPLOYMENT_NAME = st.secrets['QA_DEPLOYMENT_NAME']
 
 # Verificación de configuración
 if not all([AI_ENDPOINT, AI_KEY, AI_PROJECT_NAME, AI_DEPLOYMENT_NAME]):
