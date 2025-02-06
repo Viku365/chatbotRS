@@ -1,9 +1,66 @@
+import os
 import streamlit as st
 import requests
 import webbrowser
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.language.questionanswering import QuestionAnsweringClient
+from dotenv import load_dotenv
+import threading
+import uvicorn
 
-# URL del backend
-BACKEND_URL = "http://localhost:8000/ask"
+# Cargar las variables de entorno
+load_dotenv()
+AI_ENDPOINT = st.secrets['AI_SERVICE_ENDPOINT']
+AI_KEY = st.secrets['AI_SERVICE_KEY']
+AI_PROJECT_NAME = st.secrets['QA_PROJECT_NAME']
+AI_DEPLOYMENT_NAME = st.secrets['QA_DEPLOYMENT_NAME']
+
+# Verificación de configuración
+if not all([AI_ENDPOINT, AI_KEY, AI_PROJECT_NAME, AI_DEPLOYMENT_NAME]):
+    raise ValueError("Faltan variables de entorno en .env")
+
+# Inicializar FastAPI
+app = FastAPI()
+
+# Configurar el cliente de Azure QnA
+credential = AzureKeyCredential(AI_KEY)
+ai_client = QuestionAnsweringClient(endpoint=AI_ENDPOINT, credential=credential)
+
+# Modelo de datos para la solicitud
+class QuestionRequest(BaseModel):
+    question: str
+
+@app.post("/ask")
+async def ask_question(data: QuestionRequest):
+    """Recibe una pregunta y devuelve la respuesta de Azure QnA"""
+    try:
+        response = ai_client.get_answers(
+            question=data.question,
+            project_name=AI_PROJECT_NAME,
+            deployment_name=AI_DEPLOYMENT_NAME
+        )
+
+        if not response.answers:
+            raise HTTPException(status_code=404, detail="No se encontraron respuestas")
+
+        # Formatear la respuesta
+        answers = [
+            {
+                "answer": ans.answer,
+                "confidence": ans.confidence,
+                "source": ans.source
+            }
+            for ans in response.answers
+        ]
+        return {"answers": answers}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# ---------------- Streamlit UI ---------------- #
 
 # URL de la Knowledge Base de ResourceSpace
 KB_URL = "https://www.resourcespace.com/knowledge-base"
@@ -85,7 +142,7 @@ for msg in st.session_state.messages:
     else:
         st.chat_message("assistant").write(msg["content"])
 
-# 🔽 Input de chat (NO se descoloca)
+# 🔽 Input de chat
 user_input = st.chat_input("Escribe tu pregunta...")
 
 # 📌 Procesar entrada del usuario
@@ -105,8 +162,8 @@ if user_input or st.session_state.user_input:
         unsafe_allow_html=True,
     )
 
-    # Enviar pregunta al backend
-    response = requests.post(BACKEND_URL, json={"question": input_text})
+    # Enviar pregunta directamente al backend de FastAPI interno
+    response = requests.post("http://127.0.0.1:8000/ask", json={"question": input_text})
     if response.status_code == 200:
         response_json = response.json()
         answer = response_json.get("answers", [{"answer": "No se encontró una respuesta."}])[0]["answer"]
@@ -120,3 +177,11 @@ if user_input or st.session_state.user_input:
 
     # Limpiar variable después de usarla
     st.session_state.user_input = ""
+
+# ------------------ Iniciar FastAPI en segundo plano ------------------ #
+def run_api():
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
+# Ejecutar FastAPI en un hilo separado
+if __name__ == "__main__":
+    threading.Thread(target=run_api, daemon=True).start()
